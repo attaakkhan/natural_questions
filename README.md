@@ -1,15 +1,29 @@
-# natural_questions
-CSE 576 NLP Group
+# CSE 576 NLP Group | NQ
+
+# Note:
+#### Add models as soon as tested--complete commands for requirments and  test
+
+
+
+# Testing Section
+
+
+### Classification with already traned bert
 
 Testing already trained bert and classifying sentences
-Ref:http://jalammar.github.io/a-visual-guide-to-using-bert-for-the-first-time/
 
-
-### Classification
 ```
 $  pip3 install numpy pandas torch transformers sklearn
 $  python3.6 do_classification_with_already_trained_bert.py
 ```
 
-### NQ datasets commands
-#### TODO
+
+
+# Datasets Section
+
+
+### NQ datasets commands(
+###### TODO
+### )
+
+
