@@ -1,5 +1,9 @@
 # CSE 576 NLP Group | NQ
 
+#### Members
+######### TODO //Add your name
+
+
 # Note:
 #### Add models as soon as tested--complete commands for requirments and  test
 
