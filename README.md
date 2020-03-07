@@ -30,4 +30,7 @@ $  python3.6 do_classification_with_already_trained_bert.py
 ###### TODO
 ### )
 
+# Materials and Refrences Section
+1) http://jalammar.github.io/illustrated-transformer/
+2) http://jalammar.github.io/a-visual-guide-to-using-bert-for-the-first-time
 
