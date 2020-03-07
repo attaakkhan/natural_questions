@@ -1,7 +1,7 @@
 # CSE 576 NLP Group | NQ
 
 #### Members
-######### TODO //Add your name
+####### TODO--Add your name here
 
 
 # Note:
