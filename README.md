@@ -11,3 +11,5 @@ $  pip3 install numpy pandas torch transformers sklearn
 $  python3.6 do_classification_with_already_trained_bert.py
 ```
 
+### NQ datasets commands
+#### TODO
