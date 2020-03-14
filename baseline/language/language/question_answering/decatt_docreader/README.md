@@ -40,3 +40,6 @@ python experiments/nq_short_pipeline_experiment \
 --num_eval_steps=10 --num_train_steps=50 --model_dir=models/nq_short_pipeline
 
 ```
+
+### Example output:
+[Google Drive](https://drive.google.com/drive/folders/1mUIgolfLt6c2_0ffkiHI80gMoWW8lODh?usp=sharing)
