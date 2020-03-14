@@ -1,18 +1,18 @@
-#Get Started
+# Get Started
 
-###Create a directory for downloaded data:
+### Create a directory for downloaded data:
 
 ```shell
 mkdir -p data
 ```
-###Download the NQ data:
+### Download the NQ data:
 
 ```shell
 pip install gsutil
 gstuil -m cp -r gs://natural_questions data
 ```
 
-###Preprocess data for the short answer pipeline model:
+### Preprocess data for the short answer pipeline model:
 (You can change the training set or development set to whatever you want, the dataset included in the commands below are what I used to train in my PC)
 
 ```shell
@@ -25,13 +25,13 @@ python preprocessing/create_nq_short_pipeline_examples.py \
 --output_dir=data/natural_questions/v1.0/sample/dev
 ```
 
-###Download pre-trained word embeddings:
+### Download pre-trained word embeddings:
 ```shell
 curl http://nlp.stanford.edu/data/glove.840B.300d.zip > data/glove.840B.300d.zip
 unzip data/glove.840B.300d.zip -d data
 ```
 
-###Train your own short answer pipeline model:
+### Train your own short answer pipeline model:
 ```shell
 python experiments/nq_short_pipeline_experiment \
 --embeddings_path=data/glove.840B.300d.txt \
