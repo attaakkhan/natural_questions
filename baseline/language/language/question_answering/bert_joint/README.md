@@ -37,7 +37,7 @@ the features for it as tensorflow examples. Precomputation can be performed
 with:
 
 ```
-python -m language.question_answering.bert_joint.prepare_nq_data \
+python prepare_nq_data.py \
   --logtostderr \
   --input_jsonl ~/data/nq-train-??.jsonl.gz \
   --output_tfrecord ~/output_dir/nq-train.tfrecords-00000-of-00001 \
@@ -62,7 +62,7 @@ gsutil cp -R gs://bert-nq/tiny-dev .
 You can then evaluate our model on this data with:
 
 ```
-python -m language.question_answering.bert_joint.run_nq \
+python run_nq.py \
   --logtostderr \
   --bert_config_file=bert-joint-baseline/bert_config.json \
   --vocab_file=bert-joint-baseline/vocab-nq.txt \
@@ -100,8 +100,10 @@ train epochs between 1 and 3. In our paper we initialize our training from a
 BERT model trained on SQuAD2.0 and then finetune on NQ for only 1 epoch with a
 learning rate of 3e-5.
 
+Before training, please download [the pretrained BERT model](https://storage.googleapis.com/bert_models/2018_10_18/uncased_L-24_H-1024_A-16.zip).
+
 ```
-python -m language.question_answering.bert_joint.run_nq \
+python run_nq.py \
   --logtostderr \
   --bert_config_file=bert-joint-baseline/bert_config.json \
   --vocab_file=bert-joint-baseline/vocab-nq.txt \

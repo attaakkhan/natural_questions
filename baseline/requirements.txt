@@ -1,0 +1,4 @@
+tensorflow==1.15.0
+bert-tensorflow==1.0.1
+numpy==1.16.6
+natural-questions==1.0.4
