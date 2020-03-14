@@ -1,73 +1,42 @@
-# Getting Started
-**Create a directory for downloaded data:**
+#Get Started
 
-```
-export DATA_DIR=data
-mkdir -p $DATA_DIR
-```
+###Create a directory for downloaded data:
 
-**Download the Natural Questions data:**
-
+```shell
+mkdir -p data
 ```
-gsutil -m cp -r gs://natural_questions $DATA_DIR
-export NQ_DATA_DIR=$DATA_DIR/natural_questions/v1.0
-```
+###Download the NQ data:
 
-**Preprocess data for the long answer model:**
-
-```
-python -m language.question_answering.decatt_docreader.preprocessing.create_nq_long_examples \
-  --input_pattern=$NQ_DATA_DIR/dev/nq-dev-*.jsonl.gz \
-  --output_dir=$NQ_DATA_DIR/dev
-python -m language.question_answering.decatt_docreader.preprocessing.create_nq_long_examples \
-  --input_pattern=$NQ_DATA_DIR/train/nq-train-*.jsonl.gz \
-  --output_dir=$NQ_DATA_DIR/train
+```shell
+pip install gsutil
+gstuil -m cp -r gs://natural_questions data
 ```
 
-**Preprocess data for the short answer pipeline model:**
+###Preprocess data for the short answer pipeline model:
+(You can change the training set or development set to whatever you want, the dataset included in the commands below are what I used to train in my PC)
 
-```
-python -m language.question_answering.decatt_docreader.preprocessing.create_nq_short_pipeline_examples \
-  --input_pattern=$NQ_DATA_DIR/dev/nq-dev-*.jsonl.gz \
-  --output_dir=$NQ_DATA_DIR/dev
-python -m language.question_answering.decatt_docreader.preprocessing.create_nq_short_pipeline_examples \
-  --input_pattern=$NQ_DATA_DIR/train/nq-train-*.jsonl.gz \
-  --output_dir=$NQ_DATA_DIR/train
-```
+```shell
+python preprocessing/create_nq_short_pipeline_examples.py \
+--input_pattern=data/natural_questions/v1.0/train/nq-train-06.jsonl.gz \
+--output_dir=data/natural_questions/v1.0/sample/train
 
-**Download pre-trained word embeddings:**
-
-```
-curl https://nlp.stanford.edu/data/glove.840B.300d.zip > $DATA_DIR/glove.840B.300d.zip
-unzip $DATA_DIR/glove.840B.300d.zip -d $DATA_DIR
+python preprocessing/create_nq_short_pipeline_examples.py \
+--input_pattern=data/natural_questions/v1.0/dev/nq-dev-01.jsonl.gz \
+--output_dir=data/natural_questions/v1.0/sample/dev
 ```
 
-**Create a directory for the models:**
-
-```
-export MODELS_DIR=models
-mkdir -p $MODELS_DIR
-```
-
-**Train the long answer model.**
-
-```
-python -m language.question_answering.decatt_docreader.experiments.nq_long_experiment \
-  --embeddings_path=$DATA_DIR/glove.840B.300d.txt \
-  --nq_long_train_pattern=$NQ_DATA_DIR/train/nq-train-*.long.tfr \
-  --nq_long_eval_pattern=$NQ_DATA_DIR/dev/nq-dev-*.long.tfr \
-  --num_eval_steps=100 \
-  --batch_size=4 \
-  --model_dir=$MODELS_DIR/nq_long
+###Download pre-trained word embeddings:
+```shell
+curl http://nlp.stanford.edu/data/glove.840B.300d.zip > data/glove.840B.300d.zip
+unzip data/glove.840B.300d.zip -d data
 ```
 
-**Train the short answer pipeline model.**
+###Train your own short answer pipeline model:
+```shell
+python experiments/nq_short_pipeline_experiment \
+--embeddings_path=data/glove.840B.300d.txt \
+--nq_short_pipeline_train_pattern=data/natural_questions/v1.0/sample/train/nq-train-06.short_pipeline.tfr \
+--nq_short_pipeline_eval_pattern=data/natural_questions/v1.0/sample/dev/nq-dev-01.short_pipeline.tfr \
+--num_eval_steps=10 --num_train_steps=50 --model_dir=models/nq_short_pipeline
 
-```
-python -m language.question_answering.decatt_docreader.experiments.nq_short_pipeline_experiment \
-  --embeddings_path=$DATA_DIR/glove.840B.300d.txt \
-  --nq_short_pipeline_train_pattern=$NQ_DATA_DIR/train/nq-train-*.short_pipeline.tfr \
-  --nq_short_pipeline_eval_pattern=$NQ_DATA_DIR/dev/nq-dev-*.short_pipeline.tfr \
-  --num_eval_steps=10 \
-  --model_dir=$MODELS_DIR/nq_short_pipeline
 ```
