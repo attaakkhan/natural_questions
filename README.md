@@ -34,6 +34,42 @@ $  gsutil -m cp -r gs://natural_question data
 
 # NQ Models Section 
 ### We implemented two baseline model Bert and Decatt-Docreader which are under the file baseline
+## Bert-Joint
+
+```
+$ sudo -H pip install --upgrade pip
+$ pip install bert-tensorflow natural-questions
+$ cd natural_questions/baseline/language
+$ pip install -r requirements.txt
+$ cd language/question_answering/bert_joint
+
+
+
+
+#Download the preprocessed bert
+$ gsutil cp -R gs://bert-nq/bert-joint-baseline
+#training self bertjoint
+TODO
+
+
+#prediction
+$ python -m run_nq \
+   --logtostderr \
+   --bert_config_file=bert-joint-baseline/bert_config.json \
+   --vocab_file=bert-joint-baseline/vocab-nq.txt \
+   --predict_file=tiny-dev/nq-dev-sample.no-annot.jsonl.gz \
+   --init_checkpoint=bert-joint-baseline/bert_joint.ckpt \
+   --do_predict \
+   --output_dir=bert_model_output \
+   --output_prediction_file=bert_model_output/predictions.json
+   
+#evalvation
+TODO
+ 
+   
+
+```
+
 
 
 # Materials and Refrences Section
