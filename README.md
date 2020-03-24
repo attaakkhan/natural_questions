@@ -2,18 +2,17 @@
 # CSE 576 NLP Group | NQ
 
 #### Members
-###### TODO--Add your name here
+###### Zhaomeng Wang, Trenton Gailey, Zahra Zahedi, Zheyin Liang, Atta Khan
 
 
 # Note:
-#### Add models as soon as tested--complete commands for requirments and  test
-
+#### At this point we used two baseline models, Bert and Deccat-Docreader
 
 
 # Testing Section
 
 
-### Classification with already traned bert
+### Classification with already trained bert
 
 Testing already trained bert and classifying sentences
 
@@ -26,18 +25,21 @@ $  python3.6 do_classification_with_already_trained_bert.py
 
 # Datasets Section
 
+```
+$  pip install gsutil
+$  gsutil -m cp -r gs://natural_question data
 
-### NQ datasets commands(
-###### TODO
-### )
+```
 
 
 # NQ Models Section 
-### Squad -- TODO
+### We implemented two baseline model Bert and Decatt-Docreader which are under the file baseline
 
 
 # Materials and Refrences Section
-1) http://jalammar.github.io/illustrated-transformer/
-2) http://jalammar.github.io/a-visual-guide-to-using-bert-for-the-first-time
+1) github.com/google-research-datasets/natural-questions
+2) github.com/google-research/language/tree/master/language/question_answering
+3) http://jalammar.github.io/illustrated-transformer/
+4) http://jalammar.github.io/a-visual-guide-to-using-bert-for-the-first-time
 
 
