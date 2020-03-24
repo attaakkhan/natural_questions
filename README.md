@@ -36,7 +36,7 @@ $  gsutil -m cp -r gs://natural_question data
 ### We implemented two baseline model Bert and Decatt-Docreader which are under the file baseline
 ## Bert-Joint
 
-###Pre-req
+### Pre-req
 ```
 $ sudo -H pip install --upgrade pip
 $ pip install bert-tensorflow natural-questions
@@ -48,18 +48,18 @@ $ cd language/question_answering/bert_joint
 
 
 
-###Download the preprocessed bert
+### Download the preprocessed bert
 
 ```
 $ gsutil cp -R gs://bert-nq/bert-joint-baseline
 ```
 
 
-###Training bertjoint
+### Training bertjoint
 TODO
 
 
-###Prediction
+### Prediction
 ```
 $ python -m run_nq \
    --logtostderr \
@@ -70,8 +70,8 @@ $ python -m run_nq \
    --do_predict \
    --output_dir=bert_model_output \
    --output_prediction_file=bert_model_output/predictions.json
-   
-###Evalvation
+  ```
+### Evalvation
 TODO
  
    
