@@ -33,7 +33,7 @@ unzip data/glove.840B.300d.zip -d data
 
 ### Train your own short answer pipeline model:
 ```shell
-python experiments/nq_short_pipeline_experiment \
+python experiments/nq_short_pipeline_experiment.py \
 --embeddings_path=data/glove.840B.300d.txt \
 --nq_short_pipeline_train_pattern=data/natural_questions/v1.0/sample/train/nq-train-06.short_pipeline.tfr \
 --nq_short_pipeline_eval_pattern=data/natural_questions/v1.0/sample/dev/nq-dev-01.short_pipeline.tfr \
