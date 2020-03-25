@@ -32,7 +32,7 @@ $  gsutil -m cp -r gs://natural_question data
 ```
 ### DownLoad The Dev Set 4 files--(1.0 GB)(3-TRAIN, 1 TEST)
 ```
-$ cd natural_questions/baseline/language/language/question_answering/bert_joint
+$ cd natural_questions/baseline/language
 $ mkdir data
 $ /usr/lib/google-cloud-sdk/bin/gsutil -m cp -R gs://natural_questions/v1.0/dev ./data
 ```
@@ -51,7 +51,8 @@ $ pip install bert-tensorflow natural-questions
 $ git clone https://github.com/attaakkhan/natural_questions.git
 $ cd natural_questions/baseline/language
 $ pip install -r requirements.txt
-$ cd language/question_answering/bert_joint
+python setup.py install
+
 ```
 
 
@@ -64,6 +65,9 @@ $ gsutil cp -R gs://bert-nq/bert-joint-baseline
 
 
 ### Training bertjoint--Using the Dev Set
+### prepare data--Using the Dev Set
+mkdir output_dir
+
 TODO
 
 
