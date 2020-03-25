@@ -96,10 +96,13 @@ $ python -m language.question_answering.bert_joint.run_nq \
    --output_prediction_file=bert_model_output/predictions.json
   ```
 ### Evalvation
+
+  ```
 $ python -m natural_questions.nq_eval \
    --logtostderr \
    --gold_path=tiny-dev/nq-dev-sample.jsonl.gz \
    --predictions_path=bert_model_output/predictions.json
+     ```
 
  
    
