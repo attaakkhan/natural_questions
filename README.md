@@ -80,12 +80,12 @@ $ unzip uncased_L-24_H-1024_A-16.zip
 $  python -m language.question_answering.bert_joint.run_nq   --logtostderr   --bert_config_file=bert-joint-baseline/bert_config.json   --vocab_file=bert-joint-baseline/vocab-nq.txt   --train_precomputed_file=bert-joint-baseline/nq-dev.tfrecords-00000-of-00001   --train_num_precomputed=494670   --learning_rate=3e-5   --num_train_epochs=1   --max_seq_length=512   --save_checkpoints_steps=5000   --init_checkpoint=uncased_L-24_H-1024_A-16/bert_model.ckpt   --do_train   --output_dir=bert_model_output
 ```
 
-TODO
+## Testing using the the tiny-dev
 
 
 ### Prediction
 ```
-$ python -m run_nq \
+$ python -m language.question_answering.bert_joint.run_nq \
    --logtostderr \
    --bert_config_file=bert-joint-baseline/bert_config.json \
    --vocab_file=bert-joint-baseline/vocab-nq.txt \
@@ -96,7 +96,11 @@ $ python -m run_nq \
    --output_prediction_file=bert_model_output/predictions.json
   ```
 ### Evalvation
-TODO
+$ python -m natural_questions.nq_eval \
+   --logtostderr \
+   --gold_path=tiny-dev/nq-dev-sample.jsonl.gz \
+   --predictions_path=bert_model_output/predictions.json
+
  
    
    
