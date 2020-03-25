@@ -31,11 +31,11 @@ $  gsutil -m cp -r gs://natural_question data
 
 ```
 ### DownLoad The Dev Set 4 files--(1.0 GB)(3-TRAIN, 1 TEST)
-
+```
 $ cd /natural_questions/baseline/language/language/question_answering/bert_joint
 $ mkdir data
 $ /usr/lib/google-cloud-sdk/bin/gsutil -m cp -R gs://natural_questions/v1.0/dev ./data
-
+```
 
 
 
@@ -63,7 +63,7 @@ $ gsutil cp -R gs://bert-nq/bert-joint-baseline
 ```
 
 
-### Training bertjoint
+### Training bertjoint--Using the Dev Set
 TODO
 
 
