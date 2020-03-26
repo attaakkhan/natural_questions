@@ -42,6 +42,7 @@ $ /usr/lib/google-cloud-sdk/bin/gsutil -m cp -R gs://natural_questions/v1.0/dev 
 
 
 # NQ Models Section 
+i
 ### We implemented two baseline model Bert and Decatt-Docreader which are under the file baseline
 ## Bert-Joint
 
@@ -99,7 +100,7 @@ I0326 03:31:45.806902 139854894638976 prepare_nq_data.py:75] Examples processed:
 I0326 03:32:21.154177 139854894638976 prepare_nq_data.py:80] Examples with correct context retained: 1545 of 1600
 
 ```
-### doenload the thr pretrained bert
+### download the pretrained bert
 ```
 $ wget https://storage.googleapis.com/bert_models/2018_10_18/uncased_L-24_H-1024_A-16.zip
 $ unzip uncased_L-24_H-1024_A-16.zip 
