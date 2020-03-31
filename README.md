@@ -43,9 +43,8 @@ $ gsutil -m cp -R gs://natural_questions/v1.0 ./data
 
 
 # NQ Models Section 
-i
-### We implemented two baseline model Bert and Decatt-Docreader which are under the file baseline
-## Bert-Joint
+
+### We are testing and extending the current Bert-Joint-- avialable online on github, in the Google Language repo.
 
 ### Pre-req
 ```
@@ -53,7 +52,7 @@ $ sudo -H pip install --upgrade pip
 $ pip install bert-tensorflow natural-questions
 $ cd natural_questions/baseline/language
 $ pip install -r requirements.txt
-python setup.py install
+$ python setup.py install
 
 ```
 
@@ -132,7 +131,8 @@ $ python -m natural_questions.nq_eval \
    --logtostderr \
    --gold_path=tiny-dev/nq-dev-sample.jsonl.gz \
    --predictions_path=bert_model_output/predictions.json
-     ```
+
+  ```
 
  
    
