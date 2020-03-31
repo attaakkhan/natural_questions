@@ -5,8 +5,6 @@
 ###### Zhaomeng Wang, Trenton Gailey, Zahra Zahedi, Zheyin Liang, Atta Khan
 
 
-# Note:
-#### At this point we used two baseline models, Bert and Deccat-Docreader
 ## Ubuntu
 $ sudo apt-get install unzip
 
