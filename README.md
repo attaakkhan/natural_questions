@@ -68,8 +68,8 @@ $ gsutil cp -R gs://bert-nq/bert-joint-baseline
 ```
 
 
-### Training bertjoint--Using the Dev Set
-### prepare data--convert train to Tf Records
+### Training bertjoint--Using the tf_records
+### repare data--convert train to tf_records
 ```
 $ python -m language.question_answering.bert_joint.prepare_nq_data   --logtostderr   --input_jsonl data/dev/nq-dev-??.jsonl.gz   --output_tfrecord bert-joint-baseline/???   --max_seq_length=512   --include_unknowns=0.02   --vocab_file=bert-joint-baseline/vocab-nq.txt
 
