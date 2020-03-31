@@ -2,11 +2,12 @@
 # CSE 576 NLP Group | NQ
 
 #### Members
-###### Zhaomeng Wang
-###### Trenton Gailey
-###### Zahra Zahedi
-###### Zheyin Liang
-###### Atta Khan
+   Zhaomeng Wang
+   Trenton Gailey
+   Zahra Zahedi
+   Zheyin Liang
+   Atta Khan
+
 
 
 ## Ubuntu
