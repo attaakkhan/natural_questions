@@ -67,9 +67,9 @@ $ gsutil cp -R gs://bert-nq/bert-joint-baseline
 
 
 ### Training bertjoint--Using the Dev Set
-### prepare data--Using the Dev Set
+### prepare data--convert train to Tf Records
 ```
-$ python -m language.question_answering.bert_joint.prepare_nq_data   --logtostderr   --input_jsonl data/dev/nq-dev-??.jsonl.gz   --output_tfrecord bert-joint-baseline/nq-dev.tfrecords-00000-of-00001   --max_seq_length=512   --include_unknowns=0.02   --vocab_file=bert-joint-baseline/vocab-nq.txt
+$ python -m language.question_answering.bert_joint.prepare_nq_data   --logtostderr   --input_jsonl data/dev/nq-dev-??.jsonl.gz   --output_tfrecord bert-joint-baseline/???   --max_seq_length=512   --include_unknowns=0.02   --vocab_file=bert-joint-baseline/vocab-nq.txt
 
 
 ```
@@ -100,12 +100,12 @@ I0326 03:31:45.806902 139854894638976 prepare_nq_data.py:75] Examples processed:
 I0326 03:32:21.154177 139854894638976 prepare_nq_data.py:80] Examples with correct context retained: 1545 of 1600
 
 ```
-### download the pretrained bert
+### download the pretrained bert-- Bert Uncased
 ```
 $ wget https://storage.googleapis.com/bert_models/2018_10_18/uncased_L-24_H-1024_A-16.zip
 $ unzip uncased_L-24_H-1024_A-16.zip 
 ```
-### Train the model-Using the Dev Set
+### Train the model-Using the TF Record
 ```
 $  python -m language.question_answering.bert_joint.run_nq   --logtostderr   --bert_config_file=bert-joint-baseline/bert_config.json   --vocab_file=bert-joint-baseline/vocab-nq.txt   --train_precomputed_file=bert-joint-baseline/nq-dev.tfrecords-00000-of-00001   --train_num_precomputed=494670   --learning_rate=3e-5   --num_train_epochs=1   --max_seq_length=512   --save_checkpoints_steps=5000   --init_checkpoint=uncased_L-24_H-1024_A-16/bert_model.ckpt   --do_train   --output_dir=bert_model_output
 ```
@@ -119,7 +119,7 @@ $ python -m language.question_answering.bert_joint.run_nq \
    --logtostderr \
    --bert_config_file=bert-joint-baseline/bert_config.json \
    --vocab_file=bert-joint-baseline/vocab-nq.txt \
-   --predict_file=tiny-dev/nq-dev-sample.no-annot.jsonl.gz \
+   --predict_file=tiny-dev/nq-dev-sample.gz \
    --init_checkpoint=bert-joint-baseline/bert_joint.ckpt \
    --do_predict \
    --output_dir=bert_model_output \
