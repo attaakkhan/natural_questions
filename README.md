@@ -15,7 +15,7 @@ $ sudo apt-get install unzip
 
 ### Classification with already trained bert
 
-Testing already trained bert and classifying sentences
+Testing bert and classifying sentences
 
 ```
 $  pip3 install numpy pandas torch transformers sklearn
@@ -23,19 +23,20 @@ $  python3.6 do_classification_with_already_trained_bert.py
 ```
 
 
+# Clone
+```
+$ git clone https://github.com/attaakkhan/natural_questions.git
+```
+
 
 # Datasets Section
 
-```
-$  pip install gsutil
-$  gsutil -m cp -r gs://natural_question data
 
+
+### DownLoad The full dataset-- 50 train Files, 10 Dev files-- 307K NQ-train, 10k NQ-DEV
 ```
-### DownLoad The Dev Set 4 files--(1.0 GB)(3-TRAIN, 1 TEST)
-```
-$ cd natural_questions/baseline/language
-$ mkdir data
-$ /usr/lib/google-cloud-sdk/bin/gsutil -m cp -R gs://natural_questions/v1.0/dev ./data
+$ mkdir natural_questions/baseline/language/data
+$ gsutil -m cp -R gs://natural_questions/v1.0 ./data
 ```
 
 
@@ -50,7 +51,6 @@ i
 ```
 $ sudo -H pip install --upgrade pip
 $ pip install bert-tensorflow natural-questions
-$ git clone https://github.com/attaakkhan/natural_questions.git
 $ cd natural_questions/baseline/language
 $ pip install -r requirements.txt
 python setup.py install
