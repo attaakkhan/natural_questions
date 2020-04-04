@@ -138,8 +138,8 @@ $ python -m natural_questions.nq_eval \
    
 
   ```
-### Results
-M1: Orignal Results
+# Results
+### M1: Orignal Results
 
 ```
     "long-best-threshold-f1": 0.6168224299065421,
@@ -150,7 +150,7 @@ M1: Orignal Results
     "short-best-threshold-recall": 0.4533333333333333
 ```
 
-M2:Results after applying  post processing to M1. 
+### M2:Results after applying  post processing to M1. 
 ```
     "long-best-threshold-f1": 0.6407766990291263,
     "long-best-threshold-precision": 0.6407766990291263,
@@ -160,7 +160,7 @@ M2:Results after applying  post processing to M1.
     "short-best-threshold-recall": 0.49333333333333335,
 ```
 
-M3: Results after applying max_contexts=120 to M1
+### M3: Results after applying max_contexts=120 to M1
 ```
     "long-best-threshold-f1": 0.6355140186915887,
     "long-best-threshold-precision": 0.6126126126126126,
@@ -168,10 +168,10 @@ M3: Results after applying max_contexts=120 to M1
     "short-best-threshold-f1": 0.5619834710743801,
     "short-best-threshold-precision": 0.7391304347826086,
     "short-best-threshold-recall": 0.4533333333333333,
-    ```
+ ```
 
 
-M4: Comining M2 and M3
+### M4: Comining M2 and M3
 ```
     "long-best-threshold-f1": 0.6513761467889908,
     "long-best-threshold-precision": 0.6173913043478261,
