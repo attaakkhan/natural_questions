@@ -147,7 +147,7 @@ $ python -m natural_questions.nq_eval \
  ```
 
 
-### M4: Comining M2 and M3
+### M4: Combining M2 and M3
 ```
     "long-best-threshold-f1": 0.6513761467889908,
     "long-best-threshold-precision": 0.6173913043478261,
@@ -155,6 +155,28 @@ $ python -m natural_questions.nq_eval \
     "short-best-threshold-f1": 0.5606060606060606,
     "short-best-threshold-precision": 0.6491228070175439,
     "short-best-threshold-recall": 0.49333333333333335,
+```
+
+### M5: fined tuned wwm_uncased_bert on NQ
+```
+    "long-best-threshold-f1": 0.6494845360824741,
+    "long-best-threshold-precision": 0.6923076923076923,
+    "long-best-threshold-recall": 0.6116504854368932,
+    "short-best-threshold": 7.520410180091858,
+    "short-best-threshold-f1": 0.5644171779141104,
+    "short-best-threshold-precision": 0.5227272727272727,
+    "short-best-threshold-recall": 0.6133333333333333,
+```
+
+### M6: Combining M5 and M4
+```
+    "long-best-threshold-f1": 0.6733668341708543,
+    "long-best-threshold-precision": 0.6979166666666666,
+    "long-best-threshold-recall": 0.6504854368932039,
+    "short-best-threshold": 8.220512390136719,
+    "short-best-threshold-f1": 0.5850340136054423,
+    "short-best-threshold-precision": 0.5972222222222222,
+    "short-best-threshold-recall": 0.5733333333333334,
 ```
 
 
