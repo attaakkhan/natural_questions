@@ -11,70 +11,23 @@
 
 
 # Results
-### M1: Orignal Results
 
-```
-    "long-best-threshold-f1": 0.6168224299065421,
-    "long-best-threshold-precision": 0.5945945945945946,
-    "long-best-threshold-recall": 0.6407766990291263,
-    "short-best-threshold-f1": 0.5619834710743801,
-    "short-best-threshold-precision": 0.7391304347826086,
-    "short-best-threshold-recall": 0.4533333333333333
-```
-
-### M2:Results after applying  post processing to M1. 
-```
-    "long-best-threshold-f1": 0.6407766990291263,
-    "long-best-threshold-precision": 0.6407766990291263,
-    "long-best-threshold-recall": 0.6407766990291263,
-    "short-best-threshold-f1": 0.5522388059701493,
-    "short-best-threshold-precision": 0.6271186440677966,
-    "short-best-threshold-recall": 0.49333333333333335,
-```
-
-### M3: Results after applying max_contexts=120 to M1
-```
-    "long-best-threshold-f1": 0.6355140186915887,
-    "long-best-threshold-precision": 0.6126126126126126,
-    "long-best-threshold-recall": 0.6601941747572816,
-    "short-best-threshold-f1": 0.5619834710743801,
-    "short-best-threshold-precision": 0.7391304347826086,
-    "short-best-threshold-recall": 0.4533333333333333,
- ```
+Long: 69.07 %
+Short:58.82 %
 
 
-### M4: Combining M2 and M3
+### M8 essemble of M7 and m6
 ```
-    "long-best-threshold-f1": 0.6513761467889908,
-    "long-best-threshold-precision": 0.6173913043478261,
-    "long-best-threshold-recall": 0.6893203883495146,
-    "short-best-threshold-f1": 0.5606060606060606,
-    "short-best-threshold-precision": 0.6491228070175439,
-    "short-best-threshold-recall": 0.49333333333333335,
-```
-
-### M5: fined tuned wwm_uncased_bert on NQ
-```
-    "long-best-threshold-f1": 0.6494845360824741,
-    "long-best-threshold-precision": 0.6923076923076923,
-    "long-best-threshold-recall": 0.6116504854368932,
-    "short-best-threshold": 7.520410180091858,
-    "short-best-threshold-f1": 0.5644171779141104,
-    "short-best-threshold-precision": 0.5227272727272727,
-    "short-best-threshold-recall": 0.6133333333333333,
-```
-
-### M6: Combining M5 and M4
-```
-    "long-best-threshold-f1": 0.6733668341708543,
-    "long-best-threshold-precision": 0.6979166666666666,
+ 
+    "long-best-threshold-f1": 0.6907216494845361,
+    "long-best-threshold-precision": 0.7362637362637363,
     "long-best-threshold-recall": 0.6504854368932039,
-    "short-best-threshold": 8.220512390136719,
-    "short-best-threshold-f1": 0.5850340136054423,
-    "short-best-threshold-precision": 0.5972222222222222,
-    "short-best-threshold-recall": 0.5733333333333334,
-    
-```
+    "short-best-threshold-f1": 0.588235294117647,
+    "short-best-threshold-precision": 0.6557377049180327,
+    "short-best-threshold-recall": 0.5333333333333333,
+ ```
+ 
+ 
 ### M7 fined tuned wwm_uncased_bert  on squad then NQ
 ```
     "long-best-threshold-f1": 0.649746192893401,
@@ -86,17 +39,75 @@
     "short-best-threshold-recall": 0.56,
   
   ```
-### M8 essemble of M7 and m6
+  
+  ### M6: Combining M5 and M4
 ```
-  "long-best-threshold": 7.423669159412384,
-    "long-best-threshold-f1": 0.6907216494845361,
-    "long-best-threshold-precision": 0.7362637362637363,
+    "long-best-threshold-f1": 0.6733668341708543,
+    "long-best-threshold-precision": 0.6979166666666666,
     "long-best-threshold-recall": 0.6504854368932039,
-    "short-best-threshold": 9.13934701681137,
-    "short-best-threshold-f1": 0.588235294117647,
-    "short-best-threshold-precision": 0.6557377049180327,
-    "short-best-threshold-recall": 0.5333333333333333,
+    "short-best-threshold": 8.220512390136719,
+    "short-best-threshold-f1": 0.5850340136054423,
+    "short-best-threshold-precision": 0.5972222222222222,
+    "short-best-threshold-recall": 0.5733333333333334,
+    
+```
+### M5: fined tuned wwm_uncased_bert on NQ
+```
+    "long-best-threshold-f1": 0.6494845360824741,
+    "long-best-threshold-precision": 0.6923076923076923,
+    "long-best-threshold-recall": 0.6116504854368932,
+    "short-best-threshold": 7.520410180091858,
+    "short-best-threshold-f1": 0.5644171779141104,
+    "short-best-threshold-precision": 0.5227272727272727,
+    "short-best-threshold-recall": 0.6133333333333333,
+```
+### M4: Combining M2 and M3
+```
+    "long-best-threshold-f1": 0.6513761467889908,
+    "long-best-threshold-precision": 0.6173913043478261,
+    "long-best-threshold-recall": 0.6893203883495146,
+    "short-best-threshold-f1": 0.5606060606060606,
+    "short-best-threshold-precision": 0.6491228070175439,
+    "short-best-threshold-recall": 0.49333333333333335,
+```
+
+### M3: Results after applying  post processing to M1.
+```
+    "long-best-threshold-f1": 0.6355140186915887,
+    "long-best-threshold-precision": 0.6126126126126126,
+    "long-best-threshold-recall": 0.6601941747572816,
+    "short-best-threshold-f1": 0.5619834710743801,
+    "short-best-threshold-precision": 0.7391304347826086,
+    "short-best-threshold-recall": 0.4533333333333333,
  ```
+### M2:Results after applying max_contexts=120 to M1
+```
+    "long-best-threshold-f1": 0.6407766990291263,
+    "long-best-threshold-precision": 0.6407766990291263,
+    "long-best-threshold-recall": 0.6407766990291263,
+    "short-best-threshold-f1": 0.5522388059701493,
+    "short-best-threshold-precision": 0.6271186440677966,
+    "short-best-threshold-recall": 0.49333333333333335,
+```
+
+### M1: Orignal Results
+
+```
+    "long-best-threshold-f1": 0.6168224299065421,
+    "long-best-threshold-precision": 0.5945945945945946,
+    "long-best-threshold-recall": 0.6407766990291263,
+    "short-best-threshold-f1": 0.5619834710743801,
+    "short-best-threshold-precision": 0.7391304347826086,
+    "short-best-threshold-recall": 0.4533333333333333
+```
+
+
+
+
+
+
+
+
 
 
 ## Ubuntu
