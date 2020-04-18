@@ -177,8 +177,30 @@ $ python -m natural_questions.nq_eval \
     "short-best-threshold-f1": 0.5850340136054423,
     "short-best-threshold-precision": 0.5972222222222222,
     "short-best-threshold-recall": 0.5733333333333334,
+    
 ```
-
+### M7 fined tuned wwm_uncased_bert  on squad then NQ
+```
+    "long-best-threshold-f1": 0.649746192893401,
+    "long-best-threshold-precision": 0.6808510638297872,
+    "long-best-threshold-recall": 0.6213592233009708,
+    "short-best-threshold": 9.29402208328247,
+    "short-best-threshold-f1": 0.591549295774648,
+    "short-best-threshold-precision": 0.6268656716417911,
+    "short-best-threshold-recall": 0.56,
+  
+  ```
+### M8 esemble of M7 and m6
+```
+  "long-best-threshold": 7.423669159412384,
+    "long-best-threshold-f1": 0.6907216494845361,
+    "long-best-threshold-precision": 0.7362637362637363,
+    "long-best-threshold-recall": 0.6504854368932039,
+    "short-best-threshold": 9.13934701681137,
+    "short-best-threshold-f1": 0.588235294117647,
+    "short-best-threshold-precision": 0.6557377049180327,
+    "short-best-threshold-recall": 0.5333333333333333,
+    ```
 
 
  
