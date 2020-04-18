@@ -1,15 +1,5 @@
 
 # CSE 576 NLP Group | NQ
-
-#### Members
-   1) Zhaomeng Wang
-   2) Trenton Gailey
-   3) Zahra Zahedi
-   4) Zheyin Liang
-   5) Atta Khan
-
-
-
 # Results
 
 Long: 69.07 %
