@@ -64,7 +64,7 @@ python experiments/nq_long_experiment.py \
 --num_train_steps=200 \
 --model_dir=models/nq_long
 ```
-The model of long answer is quite huge. So I did not upload it. And the prediction accuracy of it on sample dev-set of NQ is 50%.
+The model of long answer is quite huge. So I did not upload it. And the precision of it on sample dev-set of NQ is 50%, but the Recall and F1 are not good.
 
 ### Example output of short answer pipeline model:
 [Google Drive](https://drive.google.com/drive/folders/1mUIgolfLt6c2_0ffkiHI80gMoWW8lODh?usp=sharing)
